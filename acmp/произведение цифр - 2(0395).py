@@ -9,5 +9,5 @@ for i in range(l, r+1):
         pr *= d
         a //= 10
     if pr != 0 and i % pr == 0:
-        k += 0
+        k += 1
 print(k)
