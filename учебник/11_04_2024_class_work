@@ -1,1 +1,18 @@
+def f(x):
+    return x ** 2 + 2 * x + 4
 
+
+k = 0.01
+eps = 0.001
+delta = 2 * eps
+b = 5
+a = -5
+while b - a > delta:
+    r = k * (b - a)
+    x1 = (a + b) / 2 - r
+    x2 = (a + b) / 2 + r
+    if f(x1) > f(x2):
+        a = x1
+    else:
+        b = x2
+print('x =', (a + b) / 2)
