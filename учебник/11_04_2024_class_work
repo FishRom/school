@@ -1,4 +1,4 @@
-def f(x):
+'''def f(x):
     return x ** 2 + 2 * x + 4
 
 
@@ -15,4 +15,6 @@ while b - a > delta:
         a = x1
     else:
         b = x2
-print('x =', (a + b) / 2)
+print('x =', (a + b) / 2)'''
+
+
