@@ -17,4 +17,5 @@ for x1 in '1234567':
                     s = x1 + x2 + x3 + x4 + x5
                     if s.count ('1')==0:
                         if s.count(x1) == 1 and s.count(x2) == 1 and s.count(x3) == 1 and  s.count(x4) == 1 and s.count(x5) == 1:
-                            if x1 
+                            if x1:
+                                pass
