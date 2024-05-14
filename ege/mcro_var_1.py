@@ -37,7 +37,7 @@ print(ans)'''
 записи ровно одну цифру 2, при этом рядом с этой цифрой могут стоять
 только нечётные цифры?'''
 #number 5
-'''k = 0
+k = 0
 from itertools import product
 for a in product("0123456789", repeat=5):
     s = ''.join(a)
@@ -48,9 +48,9 @@ for a in product("0123456789", repeat=5):
             q = q.replace("5", "x")
             q = q.replace("7", "x")
             q = q.replace("9", "x")
-            if "x2" in q or "2x" in q:
+            if "x2x" in q or (s[0]=="2" and "2x" in q) or (s[-1]=='2' and "x2"in q):
                 k += 1
-print(k)'''
+print(k)
 
 #number 8
 '''s = '9' * 96
@@ -62,9 +62,8 @@ while '22222' in s or '9999' in s:
 print(s)'''
 
 #number 9
-for x in range(17):
+for x in '0123456789ABCDEFG':
     s = int('819' + str(x) + '6' + str(x) + '32', 17) + \
         int('45656925' + str(x), 17) + int('771377' + str(x) + '1', 17)
     if s % 16 == 0:
         print(s // 16)
-        break

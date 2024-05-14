@@ -18,18 +18,18 @@
 получено в результате работы этого алгоритма. В ответе это число
 запишите в десятичной системе.'''
 #number 3
-'''d = []
+d = []
 for n in range(1000, -1, -1):
     n2 = bin(n)[2:]
     n2 += str(n2.count('1') % 2)
-    if n2.count('1') % 2 == 0:
+    if n % 2 == 0:
         n2 += '1'
     else:
         n2 += '0'
     r = int(n2, 2)
     if r > 204:
         d.append(r)
-print(min(d))'''
+print(min(d))
 
 #number 5
 '''Сколько существует девятеричных шестизначных чисел, содержащих
@@ -45,7 +45,7 @@ for a in product("012345678", repeat=6):
             q = q.replace("2", "x")
             q = q.replace("6", "x")
             q = q.replace("8", "x")
-            if "x4" in q or "4x" in q:
+            if "x4x" in q or (s[0]=="4" and "4x" in q) or (s[-1]=='4' and "x4"in q):
                 k += 1
 print(k)'''
 
@@ -59,9 +59,14 @@ while '9999' in s or '333' in s:
 print(s)'''
 
 #number 9
-alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')
+'''alphabet = sorted('0123456789QWERTYUIOPASDFGHJKLZXCVBNM')
+print(alphabet)
 for x in alphabet[:21]:
-    if all((int(f'G2BA{y}I{x}{x}', 21) + int(f'G{x}4{x}DFI', 21)) % 7 == 0 \
-           for y in alphabet[1:21:2]):
-                print((int(f'G2BA{6}I{x}{x}', 21) + int(f'G{x}4{x}DFI', 21)) // 7)
-                break
+    
+    for y in alphabet[:21]:
+        if (int(f'G2BA{y}I{x}{x}', 21) + int(f'G{x}4{y}DFI', 21)) % 7 != 0:
+
+           break
+    else:
+        print(x)
+        print((int(f'G2BA6I{x}{x}', 21) + int(f'G{x}46DFI', 21)) //7)'''

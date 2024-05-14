@@ -11,7 +11,7 @@ for a in product("012345678", repeat=6):
             q = q.replace("2", "x")
             q = q.replace("6", "x")
             q = q.replace("8", "x")
-            if "x4" in q or "4x" in q:
+            if "x4x" in q or (s[0] == "4" and "4x" in q) or (s[-1] == '4' and "x4" in q):
                 k += 1
 print(k)'''
 
