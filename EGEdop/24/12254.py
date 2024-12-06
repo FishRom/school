@@ -1,0 +1,11 @@
+with open('24_12254.txt', 'r') as f:
+    a = f.readline()
+    print(a[:100])
+    a = a.replace('RSQ', '+++').replace('SQ+', '-+++').replace('Q+', '-++')
+    print(a[:100])
+    a = a.replace('+RS', '+++-').replace('+R', '++-')
+    print(a[:100])
+    a = a.replace('S', '-').replace('Q', '-').replace('R', '-')
+    print(a[:100])
+    b = max([len(x) for x in a.split('-')])
+print(b)

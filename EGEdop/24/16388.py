@@ -1,0 +1,11 @@
+with open('24_16388.txt', 'r') as f:
+    a = f.readline()
+    print(a[:100])
+    a = a.replace('KLMN', '++++').replace('LMN+', '-++++').replace('MN+', '-+++').replace('N+', '-++')
+    print(a[:100])
+    a = a.replace('+KLM', '++++-').replace('+KL', '+++-').replace('+K', '++-')
+    print(a[:100])
+    a = a.replace('K', '-').replace('L', '-').replace('M', '-').replace('N', '-')
+    print(a[:100])
+    b = max([len(x) for x in a.split('-')])
+print(b)
