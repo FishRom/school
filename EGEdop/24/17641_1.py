@@ -1,6 +1,6 @@
 with open('24_17641.txt', 'r') as f:
     a = f.readline()
-    #print(a[:200])
+    print(a[:400])
     for i in range(6):
         a = a.replace('*+', '**').replace('+*', '**').replace('++', '**')
     for i in range(8, 1, -1):
