@@ -1,4 +1,4 @@
-for a in range(1, 100):
+for a in range(1, 100): #0 не является натуральным числом
     res = 1
     for x in range(1, 1000):
         z = ((x % 2 == 0) <= (x % 3 != 0)) or (x + a >= 80)
